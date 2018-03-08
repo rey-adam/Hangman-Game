@@ -1,46 +1,91 @@
-      var userName = prompt("What's your name?");
-      var confirmCats = confirm("Do you like cats?");
-
-      var petName = "Meeses";
-      var petType = "Tuxedo Cat";
-      var petAge = 5;
-      var petIsCat = true;
-
-      if (confirmCats) {
-        alert(petName + " " + petType + " " + petAge);
-      }
-      else {
-        alert("You don't get my cat's information");
-      }
-
-      if (petIsCat) {
-        alert("My pet is a cat");
-      }
-      else {
-        alert("My pet is not a cat");
-      }
-
-      if (petAge !== 7) {
-        alert("My pet is not 7 years old");
-      }
-
-      if (petAge === 5) {
-        alert("My pet is 5 years old");
-      }
-      else if (petAge < 5) {
-        alert("My pet is less than 5 years old");
-      }
-      else if (petAge > 5) {
-        alert("My pet is older than 5 years old");
-      }
+      // alert("Welcome to Reys Game")
 
 
-      document.write("Welcome to our page " + userName);
+// list of word choices 
+var cityLandMarks = ["paris" , 
+"rome" , 
+"manila" , 
+"beijing" , 
+"toronto" , 
+"vancouver" , 
+"london" , 
+"portland" ,
+"seuol" ,
+"tokyo" ,
+"osaka" ,
+"moscow" ,
+"cairo" ,
+"jakarta" ,
+"lima" ,
+"bangkok" ,
+"singapore" ,
+"petra",
+"berlin" ,
+"madrid" ,
 
-      var catAge = prompt("How old is your cat?");
+];
 
-      // Won't work as expected
-      alert(catAge + 2);
+var correctGuesses = [];
+var incorreGuesses = [];
+var remainingGuesses = 15;
 
-      // Works as expected
-      alert(parseInt(catAge) + 2);
+// Wins: (# of times user guessed the word correctly).   // instructions delete later
+var wins = 0;
+var losses = 0;
+var guessed = " already guessed, please try again...";
+var validLetter = "Please enter a letter from A-Z";
+var availableLetters = "abcdefghijklmnopqrstuvwxyz";
+
+      var currentWord = cityLandMarks[Math.floor(Math.random()*cityLandMarks.length)];
+
+      console.log(currentWord);
+
+
+//   Press any key to get started! // instructions delete later
+//click any key for the computer to select a random word from the choices 
+  document.onkeyup = function() {
+    var userguess = String.fromCharCode(event.keyCode).
+      toLowerCase();
+
+      console.log(userguess);
+
+      //computer chooses a word 
+		checkLetterInWord(userguess, currentWord);
+      
+  }
+
+  function checkLetterInWord(letter, word){
+	var n = word.search(letter);
+	if (n === -1){
+		console.log("letter is not word");
+
+	}
+	else {
+		console.log ("letter is in a word");
+	}
+  }
+
+
+
+
+
+// If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.    // instructions delete later
+	function displaySpacesForLetters(){
+		//display underscore per letter
+
+
+		//put this on the page
+	}
+
+// As the user guesses the correct letters, reveal them: m a d o _  _ a.    // instructions delete later
+	function revealCorrectLetters(){
+		//contain correct letters
+
+		//contain spaces 
+	}
+
+// Number of Guesses Remaining: (# of guesses remaining for the user).    // instructions delete later
+
+// Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).    // instructions delete later
+
+// After the user wins/loses the game should automatically choose another word and make the user play it.    // instructions delete later

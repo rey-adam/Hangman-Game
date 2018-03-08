@@ -1,3 +1,21 @@
 h1 {
-	color: green;
+	color: #006400;
+	text-align:center;
+}
+
+h2 {
+	text-align:center;
+}
+
+/*body {
+	background-color: gray;
+}*/
+
+#instructions {
+	border-style: solid;
+	
+}
+
+.container {
+
 }
