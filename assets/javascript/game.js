@@ -1,5 +1,3 @@
-      // alert("Welcome to Reys Game")
-
 
 // list of word choices 
 var cityLandMarks = ["paris", 
