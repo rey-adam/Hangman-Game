@@ -2,7 +2,7 @@
 
 
 // list of word choices 
-var cityLandMarks = ["paris" , 
+var cityLandMarks = ["paris", 
 "rome", 
 "manila", 
 "beijing", 
