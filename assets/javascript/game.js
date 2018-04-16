@@ -22,7 +22,9 @@ var cityLandMarks = ["paris" ,
 "petra",
 "berlin",
 "madrid",
-"berlin"
+"cairo",
+"nairobi",
+"harare"
 ];
 
 var correctGuesses = [];
